@@ -141,7 +141,6 @@
     border-bottom: 1px solid #aaa;
     line-height: 0.1em;
     z-index: 1000;
-
 }
 
 .completeLine{
@@ -150,4 +149,20 @@
 
 .completeText{
   color:gray;
+}
+
+#CopleteCheck{
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+#CopleteCheck:checked{
+    background: #32e732;
+    border: none;
+
+    color: white;
 }

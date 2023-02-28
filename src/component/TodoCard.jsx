@@ -6,10 +6,12 @@ export default function ToDoCard({ item, deleteHandler, completeHandler }) {
     <div>
       <div key={item.key} className="toDoCard">
         <div className="Check_Box">
-          <button
+          <input
+            id='CopleteCheck'
+            type={'checkbox'}
             onClick={() => completeHandler(item.id)}
             className="todoCheckBox"
-          ></button>
+          />
         </div>
         <div className="text_box">
           <span className={item.done === true ? "completeText" : ""}>
