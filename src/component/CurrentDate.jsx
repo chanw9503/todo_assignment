@@ -57,7 +57,6 @@ export default function CurrentDate(){
 
       useInterval(()=>{
         const newObj = {...GetCuurentDate()}; 
-        console.log(curDate);
         setDate(newObj); 
       },1000)
 

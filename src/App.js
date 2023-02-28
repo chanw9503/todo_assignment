@@ -9,22 +9,39 @@ function App() {
   const [isWriting,setIsWriting] = useState(false);
 
   const [cardList, setCardList] = useState([
-    { id: 1, done: false, content: 'Walking in the Morning', saveTime: 7 },
-    { id: 2, done: false, content: 'Walking in the lunch', saveTime: 7 },
-    { id: 3, done: false, content: 'Walking in the Evening', saveTime: 7 },
+    { id: 1, done: false, content: 'Walking in the Morning'},
+    { id: 2, done: false, content: 'Walking in the lunch'},
+    { id: 3, done: false, content: 'Walking in the Evening'},
   ]);
 
   function addCard(event,content) {
     event.preventDefault();
     setCardCount(cardCount + 1);
-    const newTime = 0;
     const obj = {
       id : Date.now(),
       done : false,
       content: content,
-      saveTime :newTime
+ 
     }
     setCardList([...cardList,obj]);
+  }
+
+  function completeCard(id){
+
+    const newCardList = cardList.map((item)=>{
+
+      let done = item.id === id ? !item.done : item.done;
+      const newObj = {
+          id : item.id,
+          done,
+          content: item.content,
+      }
+      return newObj;
+    })
+
+    console.log(newCardList);
+   setCardList(newCardList);
+
   }
 
   function deleteCard(id){
@@ -37,7 +54,6 @@ function App() {
       <div className='wrap'>
         <div className='container'>
           <Header addCardHandler = {addCard} />
-          
           {
           isWriting?<div>작성중</div> : <div className='wrap_List'>
             {
@@ -46,6 +62,7 @@ function App() {
                   key={item.id}
                   item={item}
                   deleteHandler={deleteCard}
+                  completeHandler={completeCard}
                 />
               })
             } 

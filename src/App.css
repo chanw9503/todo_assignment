@@ -1,4 +1,5 @@
 
+
 .wrap{
   display: flex;
   width: 100vw;
@@ -17,7 +18,6 @@
   background-color: white;
   border-radius: 20px;
   margin-top: 40px;
-
 }
 
 .wrap_header{
@@ -69,8 +69,8 @@
 
 .wrap_List{
   width : 550px;
-  height: 100%;
-
+  overflow-y: auto;
+  height: 950px;
   /* display: none; */
 }
 
@@ -131,4 +131,23 @@
 
 .Btn_box > .ModifyBtn:hover{
   opacity: 1;
+}
+
+.horizontalLine{
+  position: relative;
+    width: 300px;
+    margin: 0 0 10px 70px;
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+    line-height: 0.1em;
+    z-index: 1000;
+
+}
+
+.completeLine{
+  top:-35px;
+}
+
+.completeText{
+  color:gray;
 }
