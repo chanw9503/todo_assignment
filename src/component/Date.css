@@ -1,0 +1,41 @@
+.dateBox{
+    width: 500px;
+    height: 60px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .dmy_box{
+    display: flex;
+  }
+
+
+  .day{
+    margin-right: 10px;
+    font-Size: 40px;
+    line-height: 60px;
+
+  }
+
+  .year{
+    color: gray;
+  }
+
+  .month_year{
+    height: 60px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+  }
+
+  .dayofWeek{
+    line-height: 60px;
+  }
+
+  .curTime{
+    float:right;
+  }
